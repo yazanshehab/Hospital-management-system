@@ -1,0 +1,17 @@
+Tables
+
+USER
+id
+name
+type
+
+
+rooms
+number
+
+
+appointments
+doctor id
+patient id
+day 
+time
