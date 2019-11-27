@@ -1,17 +1,40 @@
-Tables
-
-USER
-id
-name
-type
+Tables:
 
 
-rooms
-number
+create table Patient(
+ID int auto_increment,
+name varchar(20),
+room numeric(2,0) null,
+primary key (ID));
 
+create table Doctor(
+ID int auto_increment,
+name varchar(20),
+field varchar(20),
+room numeric(2,0) null,
+primary key (ID));
 
-appointments
-doctor id
-patient id
-day 
-time
+create table Manager(
+ID int auto_increment,
+name varchar(20),
+primary key (ID));
+
+create table Nurse(
+ID int auto_increment,
+name varchar(20),
+primary key (ID));
+
+create table Room(
+number int,
+primary key (number));
+
+create table appointments(
+doc_id int,
+pat_id int,
+room int,
+day datetime,
+time timestamp,
+primary key (doc_id,pat_id),
+foreign key (doc_id) references Doctor(ID),
+foreign key (pat_id) references Patient(ID),
+foreign key (room) references Room(number));
