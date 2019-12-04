@@ -26,6 +26,7 @@ primary key (ID));
 
 create table Room(
 number int,
+status TINYINT(4) NOT NULL DEFAULT 1,
 primary key (number));
 
 create table appointments(
