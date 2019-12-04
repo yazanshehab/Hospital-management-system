@@ -11,7 +11,6 @@ create table Doctor(
 ID int auto_increment,
 name varchar(20),
 field varchar(20),
-room numeric(2,0) null,
 day VARCHAR(45) NOT NULL ,
 start_at TIME NOT NULL  ,
 end_at TIME NOT NULL ,
