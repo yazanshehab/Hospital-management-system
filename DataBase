@@ -42,3 +42,20 @@ primary key (doc_id,pat_id),
 foreign key (doc_id) references Doctor(ID),
 foreign key (pat_id) references Patient(ID),
 foreign key (room) references Room(number));
+
+
+CREATE TABLE dayoff (
+  doc_id int(11) DEFAULT NULL,
+  notAv datetime DEFAULT NULL,
+  FOREIGN KEY (doc_id) REFERENCES Doctor (ID)
+);
+
+CREATE TABLE veiw (
+  nurse_id int(11) DEFAULT NULL,
+  roomNo int(11) DEFAULT NULL,
+ foreign KEY roomNo (roomNo)REFERENCES Room (number),
+ foreign KEY nurse_id REFERENCES Nurse (ID)
+);
+
+
+
