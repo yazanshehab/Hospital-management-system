@@ -38,9 +38,9 @@ room int,
 day datetime,
 time timestamp,
 primary key (doc_id,pat_id),
-foreign key (doc_id) references Doctor(ID),
-foreign key (pat_id) references Patient(ID),
-foreign key (room) references Room(number));
+foreign key (doc_id) references Doctor(ID) ON DELETE RESTRICT,
+foreign key (pat_id) references Patient(ID)ON DELETE RESTRICT,
+foreign key (room) references Room(number))ON DELETE RESTRIC;
 
 
 CREATE TABLE dayoff (
