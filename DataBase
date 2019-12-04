@@ -3,8 +3,8 @@ Tables:
 
 create table Patient(
 ID int auto_increment,
-name varchar(20),
-room numeric(2,0) null,
+name varchar(20) NOT NULL,
+room numeric(2,0) NOT NULL,
 primary key (ID));
 
 create table Doctor(
@@ -12,6 +12,9 @@ ID int auto_increment,
 name varchar(20),
 field varchar(20),
 room numeric(2,0) null,
+day VARCHAR(45) NOT NULL ,
+start_at TIME NOT NULL  ,
+end_at TIME NOT NULL ,
 primary key (ID));
 
 create table Manager(
