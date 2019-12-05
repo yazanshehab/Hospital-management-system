@@ -1,0 +1,3 @@
+INSERT INTO doctor (name,field,dEmail,day,start_at,end_at)  VALUES('Mike van robben','Dentist','ro@gmail.com','MTW','09:00:00','15:00:00');
+INSERT INTO doctor (name,field,dEmail,day,start_at,end_at)  VALUES('Pickle Rick','X_Ray','pi@gmail.com','MT','10:00:00','11:00:00');
+INSERT INTO doctor (name,field,dEmail,day,start_at,end_at)  VALUES('Can Polat','Surgent','cp@gmail.com','WF','13:00:00','18:00:00');
