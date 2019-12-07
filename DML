@@ -1,11 +1,11 @@
-INSERT INTO doctor (name,field,dEmail,day,start_at,end_at)  VALUES('Mike van robben','Dentist','ro@gmail.com','MTW','09:00:00','15:00:00');
-INSERT INTO doctor (name,field,dEmail,day,start_at,end_at)  VALUES('Pickle Rick','X_Ray','pi@gmail.com','MT','10:00:00','11:00:00');
-INSERT INTO doctor (name,field,dEmail,day,start_at,end_at)  VALUES('Can Polat','Surgent','cp@gmail.com','WF','13:00:00','18:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Mike van robben','Dentist','ro@gmail.com',MD5("12341234"),'M,Tu,W,th,f','09:00:00','18:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Pickle Rick','X_Ray','pi@gmail.com',MD5("abcabc"),'M,Tu,w,th,f','10:00:00','18:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Can Polat','Surgent','cp@gmail.com',MD5("abc123"),'W,th,F,sa,su','13:00:00','21:00:00');
 
 
-INSERT INTO nurse (name,nEmail)  VALUES('Ege Gotham','bt@yahoo.com');
-INSERT INTO nurse (name,nEmail)  VALUES('Steve Bitt','st@yahoo.com');
-INSERT INTO nurse (name,nEmail)  VALUES('Lars The Slayer','cute@yahoo.com');
+INSERT INTO nurse (name,nEmail,pass)  VALUES('Ege Gotham','bt@yahoo.com',MD5("abc123"));
+INSERT INTO nurse (name,nEmail,pass)  VALUES('Steve Bitt','st@yahoo.com',MD5("abc1234"));
+INSERT INTO nurse (name,nEmail,pass)  VALUES('Lars The Slayer','cute@yahoo.com',MD5("abc12345"));
 
 
-INSERT INTO manager (mEmail,name)  VALUES('boss@ozu.com','Boss');
+INSERT INTO manager (mEmail,pass,name)  VALUES('boss@ozu.com',MD5("just156"),'Boss');
