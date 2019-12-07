@@ -2,7 +2,7 @@ create table Patient(
 ID int auto_increment,
 name varchar(20) NOT NULL,
 pEmail varchar(40) NOT NULL,
-pass varchar(40) NOTNULL,
+pass varchar(40) NOT NULL,
 room numeric(2,0) NOT NULL,
 primary key (ID));
 
@@ -11,7 +11,7 @@ ID int auto_increment,
 name varchar(20),
 field varchar(20),
 dEmail varchar(40) NOT NULL,
-pass varchar(40) NOTNULL,
+pass varchar(40) NOT NULL,
 day VARCHAR(45) NOT NULL ,
 start_at TIME NOT NULL  ,
 end_at TIME NOT NULL ,
@@ -20,7 +20,7 @@ primary key (ID));
 create table Manager(
 ID int auto_increment,
 mEmail varchar(40) NOT NULL,
-pass varchar(40) NOTNULL,
+pass varchar(40) NOT NULL,
 name varchar(20),
 primary key (ID));
 
@@ -28,7 +28,7 @@ create table Nurse(
 ID int auto_increment,
 name varchar(20),
 nEmail varchar(40) NOT NULL,
-pass varchar(40) NOTNULL,
+pass varchar(40) NOT NULL,
 primary key (ID));
 
 create table Room(
