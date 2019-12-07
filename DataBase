@@ -9,7 +9,7 @@ primary key (ID));
 create table Doctor(
 ID int auto_increment,
 name varchar(20),
-field varchar(20),
+department varchar(20),
 dEmail varchar(40) NOT NULL,
 pass varchar(40) NOTNULL,
 day VARCHAR(45) NOT NULL ,
