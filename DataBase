@@ -47,6 +47,13 @@ foreign key (doc_id) references Doctor(ID) ON DELETE RESTRICT,
 foreign key (pat_id) references Patient(ID)ON DELETE RESTRICT,
 foreign key (room) references Room(number)ON DELETE RESTRICT);
 
+create table department (
+name varchar (40)NOT NULL,
+doc_id varchar (40),
+primary key (name),
+foreign key (doc_id) references Doctor(ID)
+);
+
 
 CREATE TABLE dayoff (
   doc_id int(11) DEFAULT NULL,
