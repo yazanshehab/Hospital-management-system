@@ -42,7 +42,7 @@ pat_id int,
 room int,
 day datetime,
 time timestamp,
-primary key (doc_id,pat_id),
+primary key (doc_id,pat_id,day),
 foreign key (doc_id) references Doctor(ID) ON DELETE RESTRICT,
 foreign key (pat_id) references Patient(ID)ON DELETE RESTRICT,
 foreign key (room) references Room(number)ON DELETE RESTRICT);
