@@ -60,3 +60,11 @@ CREATE TABLE veiw (
  foreign KEY  (roomNo)REFERENCES Room (number),
  foreign KEY (nurse_id) REFERENCES Nurse (ID)
 );
+CREATE TABLE department (
+name varchar (40)NOT NULL,
+doc_id varchar (40),
+
+primary key (name),
+foreign key (doc_id) references Doctor(ID)
+
+);
