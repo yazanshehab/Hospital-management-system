@@ -1,15 +1,93 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Jabagh angok
+  Date: 11/19/2019
+  Time: 1:25 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    try {
+        Class.forName("com.mysql.jdbc.Driver");
+    } catch (ClassNotFoundException e) {
+        e.printStackTrace();
+    }
+%>
 <html>
 <head>
-    <title>Main</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Database!</title>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <style type="text/css">
+        #colCenter{
+            margin: 15%;
+        }
+        #logControl {
+            margin-left: 45%;
+        }
+    </style>
 </head>
 <body>
-Welcome to our hospital!
-<a href="login">login</a>
-<a href="Doctor">Doctor</a>
-<a href="Patient">Patient</a>
-<a href="Manager">Manager</a>
-<a href="Nurse">Nurse</a>
+<section class="section">
+    <div class="container">
 
+        <div class="field">
+            <div class="field is-horizontal">
+						<span class="icon is-medium is-left">
+							<i class="fas fa-heartbeat"></i>
+						</span>
+                <h1 class="title has-icon-left">
+                    Database Hospital project
+                </h1>
+            </div>
+            <div class="field is-horizontal">
+                <p class="subtitle">
+                    Jabagh , Yazan ,Wardah
+                </p>
+                <span class="icon is-medium is-right">
+							<i class="fas fa-bed"></i>
+						</span>
+            </div>
+
+        </div>
+        <div id="colCenter" class="columns is-mobile is-centered">
+            <div class="columns is-half">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="field">
+                            <label class="label">E-mail</label>
+                            <div class="control has-icons-left">
+                                <input class="input " type="text" placeholder="Enter E-mail" >
+                                <span class="icon is-small is-left">
+											<i class="fas fa-user"></i>
+										</span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Password</label>
+                            <div class="control has-icons-left">
+                                <input class="input " type="Password" placeholder="Enter your password" >
+                                <span class="icon is-small is-left">
+											<i class="fas fa-key"></i>
+										</span>
+                            </div>
+                        </div>
+
+                        <div id="logControl" class="field">
+                            <div class="control">
+                                <a href="dashboard.jsp" class="button" name="loginButton">Login</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 </body>
-</html>
+</html></html>
