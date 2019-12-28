@@ -62,7 +62,12 @@
             <p class="menu-label">Administration</p>
 
             <ul class="menu-list">
-                <li><a href="addUser.jsp">Add Medical Staff</a></li>
+                <li><a href="addDoctor.jsp">Add Doctor</a></li>
+
+            </ul>
+
+            <ul class="menu-list">
+                <li><a href="addNurse.jsp">Add Nurse</a></li>
 
             </ul>
 
@@ -149,12 +154,6 @@
     </div>
 
 </div>
-
-
-
-
-
-
 
 </body>
 </html>
