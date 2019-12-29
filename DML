@@ -1,6 +1,9 @@
-INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Mike van robben','Dentist','ro@gmail.com',MD5("12341234"),'M,Tu,W,th,f','09:00:00','18:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Mike van robben','cardiology','ro@gmail.com',MD5("12341234"),'M,Tu,W,th,f','09:00:00','18:00:00');
 INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Pickle Rick','X_Ray','pi@gmail.com',MD5("abcabc"),'M,Tu,w,th,f','10:00:00','18:00:00');
-INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Can Polat','Surgent','cp@gmail.com',MD5("abc123"),'W,th,F,sa,su','13:00:00','21:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('Can Polat','physiotherapy','cp@gmail.com',MD5("abc123"),'W,th,F,sa,su','13:00:00','21:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('mclovin','general','mclovin@gmail.com',MD5("abcabc"),'M,Tu,w,th,f','10:00:00','18:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('jamie cumberbach','orthopaedics','playa@gmail.com',MD5("abc123"),'W,th,F,sa,su','13:00:00','21:00:00');
+INSERT INTO doctor (name,department,dEmail,pass,day,start_at,end_at)  VALUES('tyrian lannister','orthopaedics','lion@gmail.com',MD5("abc123"),'W,th,F,sa,su','13:00:00','21:00:00');
 
 
 INSERT INTO nurse (name,nEmail,pass)  VALUES('Ege Gotham','bt@yahoo.com',MD5("abc123"));
