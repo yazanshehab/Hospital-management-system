@@ -12,3 +12,16 @@ INSERT INTO nurse (name,nEmail,pass)  VALUES('Lars The Slayer','cute@yahoo.com',
 
 
 INSERT INTO manager (mEmail,pass,name)  VALUES('boss@ozu.com',MD5("just156"),'Boss');
+
+insert into room(number) values(1);
+insert into room(number) values(2);
+insert into room(number) values(3);
+insert into room(number) values(4);
+insert into room(number) values(5);
+insert into room(number) values(6);
+insert into room(number) values(7);
+insert into room(number) values(8);
+insert into room(number) values(9);
+insert into room(number) values(10);
+
+
