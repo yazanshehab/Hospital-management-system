@@ -3,7 +3,6 @@ ID int auto_increment,
 name varchar(20) NOT NULL,
 pEmail varchar(40) NOT NULL,
 pass varchar(40) NOT NULL,
-room numeric(2,0) NOT NULL,
 primary key (ID));
 
 create table Doctor(
@@ -31,28 +30,24 @@ nEmail varchar(40) NOT NULL,
 pass varchar(40) NOT NULL,
 primary key (ID));
 
-create table Room(
-number int,
-status TINYINT(4) NOT NULL DEFAULT 1,
-primary key (number));
+CREATE TABLE `room` (
+  `number` int(11) NOT NULL,
+  `status` varchar(10) NOT NULL DEFAULT 'available',
+  `patient_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`number`),
+  KEY `patient_idx` (`patient_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 create table appointments(
+ID int auto_increment,
 doc_id int,
 pat_id int,
-room int,
 day datetime,
 time timestamp,
 primary key (doc_id,pat_id,day),
 foreign key (doc_id) references Doctor(ID) ON DELETE RESTRICT,
 foreign key (pat_id) references Patient(ID)ON DELETE RESTRICT,
 foreign key (room) references Room(number)ON DELETE RESTRICT);
-
-create table department (
-name varchar (40)NOT NULL,
-doc_id varchar (40),
-primary key (name),
-foreign key (doc_id) references Doctor(ID)
-);
 
 
 CREATE TABLE dayoff (
@@ -61,17 +56,3 @@ CREATE TABLE dayoff (
   FOREIGN KEY (doc_id) REFERENCES Doctor (ID)
 );
 
-CREATE TABLE veiw (
-  nurse_id int(11) DEFAULT NULL,
-  roomNo int(11) DEFAULT NULL,
- foreign KEY  (roomNo)REFERENCES Room (number),
- foreign KEY (nurse_id) REFERENCES Nurse (ID)
-);
-CREATE TABLE department (
-name varchar (40)NOT NULL,
-doc_id varchar (40),
-
-primary key (name),
-foreign key (doc_id) references Doctor(ID)
-
-);
